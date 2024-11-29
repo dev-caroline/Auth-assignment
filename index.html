@@ -11,7 +11,7 @@
 </head>
 
 <body class="justify-content-center d-flex" style="background-color: #6E2CF3; color: white;">
-  <div class="form-container" style="background-color: black; margin-top: 150px;">
+  <div class="form-container" style="background-color: black; margin-top: 150px; margin-bottom: 100px;">
     <p class="title fw-bold fs-2">Welcome back !</p>
     <form class="form">
       <input type="email" class="input fw-bold" placeholder="Email">
@@ -52,7 +52,7 @@
       <span>Log in with GitHub</span>
     </div>
 
-    <div class="buttons-container">
+    <div class="buttons-container" onclick="gamesBtn()">
       <div class="google-login-button">
         <svg xmlns="http://www.w3.org/2000/svg" class="games-icon" fill="currentColor" viewBox="0 0 24 24" height="1em"
           width="1em">
@@ -112,19 +112,9 @@
     }
     window.githubBtn = githubBtn;
 
+    function gamesBtn(){
 
-      // signInWithPopup(auth, provider)
-      //   .then((result) => {
-      //     const user = result.user;
-      //     console.log(user);
-      //   }).catch((error) => {
-      //     const errorCode = error.code;
-      //     const errorMessage = error.message;
-      //     console.log(errorCode);
-      //     console.log(errorMessage);
-      //   });
-    
-    // window.githubBtn = githubBtn
+    }
   </script>
 </body>
 
