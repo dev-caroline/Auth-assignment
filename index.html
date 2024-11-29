@@ -42,7 +42,7 @@
       <span>Log in with Google</span>
     </div> <br>
 
-    <div class="google-login-button">
+    <div class="google-login-button" onclick="githubBtn()">
       <svg xmlns="http://www.w3.org/2000/svg" class="github-icon" fill="currentColor" viewBox="0 0 16 16" height="1em"
         width="1em">
         <path
@@ -69,7 +69,7 @@
   <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-    import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+    import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -103,6 +103,21 @@
         });
     }
     window.googleBtn = googleBtn
+
+    function githubBtn() {
+      // alert('lol')
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          const user = result.user;
+          console.log(user);
+        }).catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorCode);
+          console.log(errorMessage);
+        });
+    }
+    window.githubBtn = githubBtn
   </script>
 </body>
 
